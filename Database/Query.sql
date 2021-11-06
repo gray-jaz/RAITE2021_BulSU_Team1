@@ -32,7 +32,6 @@ CREATE TABLE vaccination (
     vaccine_first_date datetime NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     vaccine_second_date datetime,
     philhealth_no varchar(255),
-    citizen_id varchar(11),
     pregnant tinyint(1) NOT NULL,
     breastfeeding tinyint(1) NOT NULL,
     drug_allergy tinyint(1) NOT NULL,
@@ -41,6 +40,7 @@ CREATE TABLE vaccination (
     immunodeficiency_status tinyint(1) NOT NULL,
     comorbidity varchar(1000) NOT NULL,
     diagnose_with_covid tinyint(1) NOT NULL DEFAULT 0,
+    citizen_id varchar(11),
     PRIMARY KEY (id),
     FOREIGN KEY (citizen_id) REFERENCES citizen (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
