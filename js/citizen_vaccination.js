@@ -14,33 +14,7 @@ $(document).ready(function() {
         var comorbidity = $("#comorbidity").val().trim();
         var diagnose_with_covid = $("input[name='diagnose_with_covid']:checked").val();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        if (username == "" || password == "") {
+        if (category == "" || available_id_card == "" || category == "" || philhealth_no == "" || pregnant == "" || breastfeeding == "" || drug_allergy == "" || food_allergy == "" || pollen_allergy == "" || immunodeficiency_status == "" || comorbidity == "" || diagnose_with_covid == "") {
             Swal.fire({
                 icon: 'error',
                 title: 'Please enter all the fields.'
