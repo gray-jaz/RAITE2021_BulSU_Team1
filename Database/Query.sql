@@ -52,7 +52,7 @@ CREATE TABLE contact_tracing (
     exposure_to_covid_patient tinyint(1) NOT NULL,
     exposure_outside_province tinyint(1) NOT NULL,
     exposure_overseas_travel tinyint(1) NOT NULL,
-    living_status tinyint(1) NOT NULL,
+    living_status varchar(255) NOT NULL,
     symptoms varchar(255) NOT NULL,
     citizen_id varchar(11),
     PRIMARY KEY (id),

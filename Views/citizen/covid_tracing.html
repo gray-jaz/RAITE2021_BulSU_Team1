@@ -12,9 +12,73 @@
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11 "></script>
     <script src="../../js/citizen_covid_tracing.js"></script>
+
+    <style>
+        .tbl-radio-block input[type=radio] {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .tbl-radio-block .lbl-radio {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
+
+    <main>
+
+        <div class="header">
+            <h1>Contact Tracing Form</h1>
+            <p>Please fill up all the required fields (*).</p>
+        </div>
+
+        <table class="table-form">
+            <tr>
+                <td colspan="2" class="tbl-radio-block">
+                    <label for="exposure_to_covid_patient">Have you been exposed to COVID-19 patients within or the last two (2) weeks?*</label>
+                    <input type="radio" name="exposure_to_covid_patient" id="exposure_to_covid_patient-yes" value="0"> <label class="lbl-radio">Yes, I have been exposed.</label><br>
+                    <input type="radio" name="exposure_to_covid_patient" id="exposure_to_covid_patient-no" value="1" checked> <label class="lbl-radio">No, I have not been exposed.</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="tbl-radio-block">
+                    <label for="exposure_outside_province">Have you traveled outside the province within or the last two (2) weeks?*</label>
+                    <input type="radio" name="exposure_outside_province" id="exposure_outside_province-yes" value="0"> <label class="lbl-radio">Yes, I traveled outside the province.</label><br>
+                    <input type="radio" name="exposure_outside_province" id="exposure_outside_province-no" value="1" checked> <label class="lbl-radio">No, I did not travel outside the province.</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="tbl-radio-block">
+                    <label for="exposure_overseas_travel">Have you traveled overseas or exposed to someone from overseas within or the last two (2) weeks??*</label>
+                    <input type="radio" name="exposure_overseas_travel" id="exposure_overseas_travel-yes" value="0"> <label class="lbl-radio">Yes, I traveled overseas or encountered someone from overseas.</label><br>
+                    <input type="radio" name="exposure_overseas_travel" id="exposure_overseas_travel-no" value="1" checked> <label class="lbl-radio">No, I did not travel overseas or encountered someone from overseas.</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="living_status">What is your living status?</label>
+                    <select name="living_status" id="living_status">
+                        <option value="Living alone">Living alone</option>
+                        <option value="Living with family">Living with family</option>
+                        <option value="Living with co-workers or others">Living with co-workers or others</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="symptoms">Are you experiencing symptoms of COVID 19? If yes, please enter all your symptoms</label>
+                    <textarea name="symptoms" id="symptoms"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn-submit-container">
+            <button type="submit" id="btn-submit">Save</button>
+        </div>
+    </main>
 
 </body>
 
