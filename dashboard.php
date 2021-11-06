@@ -18,13 +18,16 @@
 
         <ul>
             <li class="active-menu">
-                <a href="views/route">Routes</a>
+                <a href="views/route">DASHBOARD</a>
             </li>
             <li>
-                <a href="views/ship">Ships</a>
+                <a href="views/ship">COVID TRACING</a>
             </li>
             <li>
-                <a href="views/crew">Crews</a>
+                <a href="views/crew">VACCINATION</a>
+            </li>
+            <li>
+                <a href="views/crew">CITIZENS</a>
             </li>
         </ul>
     </nav>
