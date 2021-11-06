@@ -1,3 +1,10 @@
+body {
+	/*background-image: url(../images/background1.jpg);*/
+	background-image: url(../images/bg2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+
 .div-login {
 	width: 600px;
 	height: 550px;
