@@ -160,6 +160,7 @@
     input[type=number],
     input[type=date],
     input[type=email],
+    input[type=textarea],
     button,
     select {
         font-size: 1em;
@@ -196,6 +197,7 @@
     input[type=number],
     input[type=date],
     input[type=email],
+    input[type=textarea],
     select {
         border-radius: 8px;
         background: rgba(242, 242, 242, 1);

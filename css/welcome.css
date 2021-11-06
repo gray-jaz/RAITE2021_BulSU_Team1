@@ -10,14 +10,14 @@ body {
 	width: 50%;
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 10%;
+	margin-top: 7%;
 	animation-name: move_up;
   	animation-duration: 1.5s;
 }
 
 @keyframes move_up {
-  from {margin-top: 25%;}
-  to {margin-top: 10%;}
+  from {margin-top: 15%;}
+  to {margin-top: 7%;}
 }
 
 #btn-login {
@@ -29,4 +29,15 @@ body {
   0% {opacity: 0;}
   50% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+.covid-info {
+	color: #ffffff;
+	text-shadow: 1.5px 1px #495BBB;
+	line-height: 50px;
+}
+
+.covid-info:hover {
+	color: #495BBB;
+	text-shadow: 1px 1px #ffffff;
 }
