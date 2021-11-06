@@ -25,7 +25,7 @@ CREATE TABLE citizen (
 -- VACC-1010001
 
 CREATE TABLE vaccination (
-    id varchar(11) NOT NULL,
+    id int NOT NULL AUTO_INCREMENT,
     category tinyint(1) NOT NULL,
     available_id_card varchar(255) NOT NULL,
     vaccine_name varchar(255) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE vaccination (
 -- CTRC-1010001
 
 CREATE TABLE contact_tracing (
-    id varchar(11) NOT NULL,
+    id int NOT NULL AUTO_INCREMENT,
     exposure_to_covid_patient tinyint(1) NOT NULL,
     exposure_outside_province tinyint(1) NOT NULL,
     exposure_overseas_travel tinyint(1) NOT NULL,
