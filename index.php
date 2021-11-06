@@ -18,7 +18,7 @@ if(isset($_SESSION["username"])) {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> RHU - CTVMS </title>
+	<title>Homepage - COVID-TV MIS</title>
 	<link rel="stylesheet" type="text/css" href="css/welcome.css">
 	<link rel="stylesheet" type="text/css" href="css/master.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -27,7 +27,7 @@ if(isset($_SESSION["username"])) {
 	<a href="#" style="text-decoration: none;color: #ffffff;" data-toggle="modal" data-target="#exampleModalLong"><i><p class="covid-info">&nbsp;&nbsp;&nbsp;&nbsp;Is contact tracing and vaccine important?</p></i></a>
 	<div class="div-welcome">
 		<img src="images/logo.png" height="200"><br>
-		<a href="Views/login.html"><button id="btn-login" style="margin-top: 7%;"> Login to your account </button></a>
+		<a href="Views/login.html" style="text-decoration: none;"><button id="btn-login" style="margin-top: 7%;"> Login to your account </button></a>
 	</div>
 
 	<!-- Modal -->
