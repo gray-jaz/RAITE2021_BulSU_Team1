@@ -38,6 +38,11 @@
         font-family: "Poppins"!important;
         font-weight: 600;
     }
+
+    text {
+        font-family: "Poppins"!important;
+        font-weight: 600;
+    }
     
     .header h1,
     .header h2,
@@ -152,7 +157,7 @@
     }
     
     button {
-        background: #16747C;
+        background: #4B49B6;
         /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, #16747C, #16747C), #0DCEDA; */
         border-radius: 8px;
         color: #fff;
@@ -169,7 +174,7 @@
     }
     
     button:hover {
-        background: #2698A1;
+        background: #3718B4;
         transition: background .1s linear;
     }
     
@@ -192,7 +197,7 @@
     input:hover {
         border-radius: 8px;
         background: #fff;
-        border: 2px solid #16747C;
+        border: 2px solid #4B49B6;
         transition: .1s ease-in-out;
     }
     
