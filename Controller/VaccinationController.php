@@ -8,9 +8,9 @@ $columns = ["id", "category", "available_id_card", "vaccine_name", "vaccine_firs
 
 
 
-if(isset($_POST["save"])) {
+if(isset($_POST["add"])) {
     
-    
+    echo "ok";
 
 }
 
