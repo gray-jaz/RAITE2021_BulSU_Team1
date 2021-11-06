@@ -4,4 +4,5 @@
     unset($_SESSION["citizen_id"]);
     unset($_SESSION["account_type"]);
     session_destroy();
+    header("Location: ../index.php");
 ?>
