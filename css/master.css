@@ -92,6 +92,7 @@
         text-transform: uppercase;
         font-size: 0.875em;
         font-weight: 600;
+        margin-top: 2%;
     }
     
     nav li:hover,
@@ -99,6 +100,17 @@
         border-left: 5px solid white;
         transition: .2s linear;
     }
+
+    .nav-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .nav-footer p {
+        color: #ffffff;
+    }
+
     /* table */
     
     table {
@@ -245,3 +257,56 @@
     .goBack i {
         color: rgba(22, 116, 124);
     }
+
+#user-icon {
+    height: 100px;
+}
+
+.fas {
+    height: 100px;
+}
+
+.div-dashboard {
+    margin-left: 22%;
+    padding: 30px 80px;
+}
+
+.info-boxes {
+    display: inline-flex;
+    width: 100%;
+    height: 200px;
+}
+
+.div-info-boxes {
+    width: 185.01px;
+    height: 125px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 3%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.div-info-boxes h1,h4 {
+    color: #ffffff;
+}
+
+.div-info-boxes h4 {
+    margin-top: -30px;
+}
+
+#qr {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, #4B49B6, #4B49B6), #514EE2;
+}
+
+#rs {
+    background: linear-gradient(97.09deg, #2B31C6 -23.62%, rgba(116, 72, 72, 0) 97.83%), #5E49E2;
+}
+
+#vc {
+    background: linear-gradient(270deg, #90B5ED 0%, rgba(79, 110, 219, 0.078125) 166%), linear-gradient(0deg, #495BBB, #495BBB), linear-gradient(0deg, rgba(55, 24, 180, 0.54), rgba(55, 24, 180, 0.54)), #5E49E2;
+}
+
+#nvc {
+    background: linear-gradient(270deg, #C9C8EF 0%, rgba(246, 244, 255, 0) 157.35%), linear-gradient(0deg, #495BBB, #495BBB), linear-gradient(0deg, rgba(55, 24, 180, 0.54), rgba(55, 24, 180, 0.54)), #5E49E2;
+}

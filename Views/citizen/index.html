@@ -12,10 +12,50 @@
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11 "></script>
     <script src="../../js/citizen_index.js"></script>
+    <style>
+        #btn-fill-form {
+            background: linear-gradient(270deg, #90B5ED 0%, rgba(79, 110, 219, 0.078125) 166%), linear-gradient(0deg, #495BBB, #495BBB), linear-gradient(0deg, rgba(55, 24, 180, 0.54), rgba(55, 24, 180, 0.54)), #5E49E2;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;"
+        }
+        #btn-fill-form:hover {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, #4B49B6, #4B49B6), #514EE2;
+        }
+    </style>
 </head>
 
 <body>
 
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img class="img-logo" src="../../images/logo.png"></a>
+        </div>
+
+        <ul>
+            <li class="active-menu">
+                <a href="#">DASHBOARD</a>
+            </li>
+            <li>
+                <a href="#">CONTACT TRACING</a>
+            </li>
+            <li>
+                <a href="#">VACCINATION FORM</a>
+            </li>
+        </ul>
+
+        <div class="nav-footer">
+            <p><span class="far fa-user-circle" id="user-icon"></span>User-Account Name<p>
+            <p id="position">SUPER ADMIN</p>
+            <a href="#"><p>LOGOUT</p></a>
+        </div>
+    </nav>
+    <div class="div-dashboard">
+        <div style="margin-top: 15%;text-align: center;">
+            <h1>Hello, good Citizen!</h1>
+            <h5>You are reported to have COVID-19!</h5>
+
+            <button id="btn-fill-form">Fill out the Contact Tracing Form</button>
+        </div>
 </body>
 
 </html>
