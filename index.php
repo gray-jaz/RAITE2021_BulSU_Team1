@@ -1,3 +1,18 @@
+<?php session_start();
+
+if(isset($_SESSION["username"])) {
+    if ($_SESSION["account_type"] == 1) {
+        //admin
+        header('Location: views/admin/index.html');
+    }
+    else if ($_SESSION["account_type"] == 0) {
+        //citizen
+        header('Location: views/citizen/index.html');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
