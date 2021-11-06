@@ -37,7 +37,9 @@ $(document).ready(function() {
 
             if (pregnant == "1") {
                 vaccine_name = "Sinovac-CoronaVac";
-            } else if (category == "3") {
+            }
+
+            if (category == "3") {
                 vaccine_name = "Johnson & Johnson";
             } else {
                 //randomize for now!!! ONLY DON'T DO THIS just for prototype purposes
