@@ -17,6 +17,11 @@ if (isset($_POST['username'])) {
         while ($row = $result->fetch_assoc()) {
             $_SESSION["username"] = $row['username'];
             $_SESSION["account_type"] = $row['account_type'];
+
+            if ($row['account_type'] == 0) {
+                $_SESSION["citizen_id"] = $row['citizen_id'];
+            }
+
             echo $row['account_type'];
         }
     } else {
