@@ -4,6 +4,10 @@
 CREATE TABLE citizen (
     id varchar(11) NOT NULL,
     username varchar(25) NOT NULL UNIQUE,
+    house_address varchar(255) NOT NULL,
+    barangay varchar(255) NOT NULL,
+    municipality varchar(255) NOT NULL,
+    province varchar(255) NOT NULL,
     `password` varchar(25) NOT NULL,
     sex char NOT NULL,
     birthdate datetime NOT NULL,
@@ -13,6 +17,7 @@ CREATE TABLE citizen (
     covid_status tinyint(1) NOT NULL DEFAULT 0,
     covid_status_reported datetime NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     quarantine_end_date tinyint(1),
+    marital_status tinyint(1),
     PRIMARY KEY (id)
 )
 
@@ -25,6 +30,7 @@ CREATE TABLE vaccination (
     vaccine_second_date datetime,
     philhealth_no varchar(255),
     citizen_id varchar(11),
+    diagnose_with_covid tinyint(1) NOT NULL DEFAULT 0,
     PRIMARY KEY (id),
     FOREIGN KEY (citizen_id) REFERENCES citizen (id)
 )
@@ -34,9 +40,10 @@ CREATE TABLE vaccination (
 CREATE TABLE contact_tracing (
     id varchar(11) NOT NULL,
     exposure_to_covid_patient tinyint(1) NOT NULL,
+    exposure_outside_province tinyint(1) NOT NULL,
     exposure_overseas_travel tinyint(1) NOT NULL,
-    coug
-
+    living_status tinyint(1) NOT NULL,
+    symptoms varchar(255) NOT NULL,
     citizen_id varchar(11),
     PRIMARY KEY (id),
     FOREIGN KEY (citizen_id) REFERENCES citizen (id)
