@@ -7,7 +7,6 @@ $table = "vaccination";
 $columns = ["category", "available_id_card", "philhealth_no", "pregnant", "breastfeeding", "drug_allergy", "food_allery", "pollen_allery", "immunodeficiency_status", "comorbidity", "diagnose_with_covid", "vaccine_name", "vaccine_first_date", "vaccine_second_date",  "citizen_id"];
 
 
-
 if (isset($_POST["add"])) {
     $category = $_POST['category'];
     $available_id_card = $_POST['available_id_card'];
@@ -23,9 +22,9 @@ if (isset($_POST["add"])) {
     $vaccine_name = $_POST['vaccine_name'];
     $vaccine_first_date = $_POST['vaccine_first_date'];
     $vaccine_second_date = $_POST['vaccine_second_date'];
-    $citizen_id = "2021-100001";
+    $citizen_id = $_SESSION["citizen_id"];
 
-    $values = "'$category', '$available_id_card', '$philhealth_no', '$pregnant', '$breastfeeding', '$drug_allergy', '$food_allergy', '$pollen_allergy', '$immunodeficiency_status', '$comorbidity', '$diagnose_with_covid', '$vaccine_name', '$vaccine_first_date', '$vaccine_second_date', '$citizen_id'";
+    $values = "$category, '$available_id_card', '$philhealth_no', '$pregnant', '$breastfeeding', $drug_allergy, $food_allergy, $pollen_allergy, $immunodeficiency_status, '$comorbidity', $diagnose_with_covid, '$vaccine_name', '$vaccine_first_date', '$vaccine_second_date', '$citizen_id'";
 
     if($conn->query("INSERT into $table (" . implode(', ', $columns) . ") VALUES (" . $values . ")")) {
         echo "ok";

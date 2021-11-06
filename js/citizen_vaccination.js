@@ -2,8 +2,8 @@ $(document).ready(function() {
 
     $("#btn-submit").click(function() {
 
-        var category = $("#category").find(":selected").text();
-        var available_id_card = $('#category').find(":selected").text();
+        var category = $("#category").find(":selected").val();
+        var available_id_card = $('#category').find(":selected").val();
         var philhealth_no = $("#philhealth_no").val().trim();
         var pregnant = $("input[name='pregnant']:checked").val();
         var breastfeeding = $("input[name='breastfeeding']:checked").val();
@@ -13,6 +13,8 @@ $(document).ready(function() {
         var immunodeficiency_status = $("input[name='immunodeficiency_status']:checked").val();
         var comorbidity = $("#comorbidity").val().trim();
         var diagnose_with_covid = $("input[name='diagnose_with_covid']:checked").val();
+
+        console.log("available id card: " + available_id_card);
 
         if (category == "" || available_id_card == "" || category == "" || philhealth_no == "" || pregnant == "" || breastfeeding == "" || drug_allergy == "" || food_allergy == "" || pollen_allergy == "" || immunodeficiency_status == "" || comorbidity == "" || diagnose_with_covid == "") {
             Swal.fire({
@@ -91,8 +93,8 @@ $(document).ready(function() {
                     comorbidity: comorbidity,
                     diagnose_with_covid: diagnose_with_covid,
                     vaccine_name: vaccine_name,
-                    vaccine_first_date: vaccine_first_date,
-                    vaccine_second_date: vaccine_second_date,
+                    vaccine_first_date: 2021 + "-" + vaccine_first_date.getMonth() + "-" + vaccine_first_date.getDate(),
+                    vaccine_second_date: 2021 + "-" + vaccine_second_date.getMonth() + "-" + vaccine_second_date.getDate(),
                     add: 'add'
                 },
                 function(data, status) {
@@ -104,7 +106,7 @@ $(document).ready(function() {
                                 title: 'You have successfully been scheduled for vaccination!',
                                 html: 'Your <strong>vaccine</strong> is ' + vaccine_name + '. <strong>First dose</strong> is on: ' + vaccine_first_date.toDateString() + '. ' + second_dose_text
                             }).then((result) => {
-                                // window.location.href = "admin/index.html";
+                                window.location.href = "index.html";
                             })
                         } else {
                             Swal.fire({
